@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovimientoCircular : MonoBehaviour
 {
+    //CHAT GPT
     public float radio = 5f;          // Radio del movimiento circular
     public float velocidadAngular = 2f; // Velocidad de rotación en radianes por segundo
     private bool direccionHorario = true; // Dirección del movimiento (horario o antihorario)
