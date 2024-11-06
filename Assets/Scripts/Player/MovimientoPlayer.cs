@@ -11,7 +11,7 @@ public class MovimientoPlayer : MonoBehaviour
     void Update()
     {
         circularmovement();
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             change_direction();
         }
