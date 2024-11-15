@@ -329,6 +329,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1936235794}
   BulletPrefab: {fileID: 2939783516275150860, guid: d01a0c50f4d104f468c62e6651ce17cc, type: 3}
+--- !u!1 &1199729416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199729417}
+  m_Layer: 0
+  m_Name: Movimiento
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1199729417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199729416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.6853623, y: 1.2964989, z: -0.06810052}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512758000
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,3 +586,4 @@ SceneRoots:
   - {fileID: 902099578}
   - {fileID: 2194047323780538359}
   - {fileID: 1512758002}
+  - {fileID: 1199729417}

@@ -19,7 +19,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     void circularmovement()
     {
-        rotation = rotation + 200 * Time.deltaTime * (direccionHorario ? 1 : -1); ;
+        rotation = rotation + 200 * Time.deltaTime * (direccionHorario ? 1 : -1);
         gameObject.transform.rotation = Quaternion.Euler(0, 0, rotation);
         gameObject.transform.Translate(0, speed * Time.deltaTime, 0);
     }
