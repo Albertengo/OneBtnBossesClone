@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3016591774163397901}
   - component: {fileID: 5286069764719417718}
   - component: {fileID: 4989533319663248539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841fc9fd5612b7441a34fcd9dfd30d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 3
+  velocidad: 20
   rbBala: {fileID: 5286069764719417718}
-  tiempo: 1
+  tiempo: 3
 --- !u!50 &5286069764719417718
 Rigidbody2D:
   serializedVersion: 4
@@ -141,7 +141,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

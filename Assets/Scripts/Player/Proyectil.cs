@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour
 {
+    public Transform Bullets;
     public Transform FirePoint;
     public GameObject BulletPrefab;
+    bool canShoot = true;
 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Shoot();
+        if (canShoot)
+        {
+            StartCoroutine(Shoot(0.1f));
+        }
     }
 
-    void Shoot()
+    private IEnumerator Shoot(float seconds)
     {
-        Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);
+        Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation, Bullets);
+        canShoot = false;
+        yield return new WaitForSeconds(seconds);
+        canShoot = true;
+
     }
+
 }
