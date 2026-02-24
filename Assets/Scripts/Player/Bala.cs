@@ -9,6 +9,7 @@ public class Balas : MonoBehaviour
     public float velocidad = 1f;
     public Rigidbody2D rbBala;
     public float tiempo = 3; //el alcance que va a tener la bala antes de desaparecer
+    [SerializeField] string Tag_Objetivo;
     #endregion
 
     #region funciones basicas
@@ -24,7 +25,7 @@ public class Balas : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == Tag_Objetivo)
         {
             Destroy(gameObject);
         }

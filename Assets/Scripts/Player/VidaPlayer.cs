@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class VidaEnemigo : Vida
+public class VidaPlayer : Vida
 {
     protected override void Death()
     {
-        Destroy(gameObject);
+        Debug.Log("Perdiste");
     }
 
 }
