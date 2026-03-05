@@ -102,7 +102,7 @@ MonoBehaviour:
   velocidad: 20
   rbBala: {fileID: 5286069764719417718}
   tiempo: 3
-  Tag_Objetivo: 
+  Tag_Objetivo: Player
 --- !u!50 &5286069764719417718
 Rigidbody2D:
   serializedVersion: 4

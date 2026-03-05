@@ -226,6 +226,8 @@ GameObject:
   - component: {fileID: 902099578}
   - component: {fileID: 902099577}
   - component: {fileID: 902099580}
+  - component: {fileID: 902099582}
+  - component: {fileID: 902099581}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -316,6 +318,56 @@ MonoBehaviour:
   Bullets: {fileID: 1257723791}
   FirePoint: {fileID: 1936235794}
   BulletPrefab: {fileID: 2939783516275150860, guid: d01a0c50f4d104f468c62e6651ce17cc, type: 3}
+--- !u!58 &902099581
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902099576}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.4999995, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49999997
+--- !u!114 &902099582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902099576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac7a5e07a5e7944a83d0032d8a5190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaludMax: 100
+  SaludActual: 0
+  "Da\xF1oRecibido": 2
 --- !u!1 &1199729416
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +422,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199729416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dac7a5e07a5e7944a83d0032d8a5190, type: 3}
   m_Name: 
@@ -613,11 +665,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2939783516275150860, guid: 6f08609255f622847bf9003ef18a9879, type: 3}
       propertyPath: m_Name
-      value: Bullet Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3016591774163397901, guid: 6f08609255f622847bf9003ef18a9879, type: 3}
-      propertyPath: Tag_Objetivo
-      value: Player
+      value: Bullet_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4956345944541413225, guid: 6f08609255f622847bf9003ef18a9879, type: 3}
       propertyPath: m_LocalPosition.x
@@ -689,7 +737,7 @@ Transform:
   m_GameObject: {fileID: 1936235793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.848, y: -0.019, z: -0.0051555554}
+  m_LocalPosition: {x: -3.64, y: -0.019, z: -0.0051555554}
   m_LocalScale: {x: 1.7368951, y: 1.7368951, z: 1.7368951}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -736,7 +784,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2939783516275150860, guid: d01a0c50f4d104f468c62e6651ce17cc, type: 3}
       propertyPath: m_Name
-      value: Bullet
+      value: Bullet_Player
       objectReference: {fileID: 0}
     - target: {fileID: 3016591774163397901, guid: d01a0c50f4d104f468c62e6651ce17cc, type: 3}
       propertyPath: Tag_Objetivo
