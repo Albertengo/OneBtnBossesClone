@@ -7,6 +7,7 @@ public class VidaPlayer : Vida
     protected override void Death()
     {
         Debug.Log("Perdiste");
+        GameManager.managerInstance.activatePanel(GameManager.managerInstance.Defeat_UI);
     }
 
 }
