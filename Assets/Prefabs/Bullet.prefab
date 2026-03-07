@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841fc9fd5612b7441a34fcd9dfd30d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
+  velocidad: 5
   rbBala: {fileID: 5286069764719417718}
   tiempo: 3
+  Tag_Objetivo: Enemy
 --- !u!50 &5286069764719417718
 Rigidbody2D:
   serializedVersion: 4

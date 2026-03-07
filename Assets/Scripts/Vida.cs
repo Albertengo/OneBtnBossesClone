@@ -9,9 +9,12 @@ public abstract class Vida : MonoBehaviour
 
     [SerializeField] int DañoRecibido;
 
+    [SerializeField] HealthSlider HealthBar;
+
     void Start()
     {
         SaludActual = SaludMax;
+        HealthBar.startHealthBar(SaludActual);
     }
 
     #region Code
@@ -19,9 +22,11 @@ public abstract class Vida : MonoBehaviour
     public void recibirDaño(int daño)
     {
         SaludActual = SaludActual - daño;
+        HealthBar.SetHealth(SaludActual);
         if (SaludActual <= 0)
         {
             Death();
+            HealthBar.gameObject.SetActive(false);
             //Destroy(gameObject);
             //Debug.Log("Enemigo eliminado");
             //nivel terminado
