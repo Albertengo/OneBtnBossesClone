@@ -20,6 +20,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     void circular_movement()
     {
+        /*
         switch (direccionHorario)
         {
             case true:
@@ -31,6 +32,7 @@ public class MovimientoPlayer : MonoBehaviour
                 //rotation -= speed * Time.deltaTime; //cambia velocidad
                 break;
         }
+        */
 
         Player_rotation();
     }
