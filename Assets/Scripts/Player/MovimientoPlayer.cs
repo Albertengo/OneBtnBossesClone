@@ -5,27 +5,45 @@ using UnityEngine;
 public class MovimientoPlayer : MonoBehaviour
 {
     float rotation = 0;
-    public float speed;
+    [SerializeField] float speed = 200;
+    //public float speed;
     private bool direccionHorario = true;
 
     void Update()
     {
-        circularmovement();
+        circular_movement();
         if (Input.GetKeyUp(KeyCode.E))
         {
             change_direction();
         }
     }
 
-    void circularmovement()
+    void circular_movement()
     {
-        rotation = rotation + 200 * Time.deltaTime * (direccionHorario ? 1 : -1);
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, rotation);
-        gameObject.transform.Translate(0, speed * Time.deltaTime, 0);
+        switch (direccionHorario)
+        {
+            case true:
+                //rotation -= speed + Time.deltaTime;
+                //gameObject.transform.Translate(0, angle -= speed + Time.deltaTime, 0);
+                break;
+
+            case false:
+                //rotation -= speed * Time.deltaTime; //cambia velocidad
+                break;
+        }
+
+        Player_rotation();
     }
     void change_direction()
     {
         direccionHorario = !direccionHorario;
+    }
+
+    void Player_rotation()
+    {
+        rotation = rotation + speed * Time.deltaTime * (direccionHorario ? 1 : -1);
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, rotation);
+        gameObject.transform.Translate(0, 0 * Time.deltaTime, 0);
     }
 
 }
