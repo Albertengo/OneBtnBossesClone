@@ -6,7 +6,7 @@ public abstract class movimientocircular : MonoBehaviour
 {
     protected float rotation = 0;
     [SerializeField] protected float speed = 200;
-    protected private bool direccionHorario = true; //se puede usar para q randomente el enemigo cambie de direccion?
+    protected private bool direccionHorario = true;
 
     protected void SetSpeed()
     {

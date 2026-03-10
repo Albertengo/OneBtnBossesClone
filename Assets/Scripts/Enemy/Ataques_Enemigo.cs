@@ -12,15 +12,13 @@ public abstract class Ataques_Enemigo : MonoBehaviour
 
     void Update()
     {
-        Execute_Skill();
+        if (can_skill)
+            Execute_Skill();
     }
     IEnumerator Execute_Skill()
     {
-        if (can_skill)
-        {
             Instance_Skill_Circle();
             yield return new WaitForSeconds(cooldown_skill);
-        }
     }
 
     //public void ExecuteSkill()
