@@ -9,11 +9,6 @@ public class Proyectil : MonoBehaviour
     public GameObject BulletPrefab;
     bool canShoot = true;
 
-    void Start()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         if (canShoot)
