@@ -19,4 +19,22 @@ public abstract class movimientocircular : MonoBehaviour
         gameObject.transform.Translate(0, 0 * Time.deltaTime, 0);
     }
 
+    IEnumerator Execute_Skill()
+    {
+        //ChangeDirection_SpeedChange();
+        speed = 150;
+        Debug.Log("cambio de velocidad");
+
+        yield return new WaitForSeconds(3f);
+        yield break;
+    }
+    protected void ChangeDirection_SpeedChange()
+    {
+        speed = 150;
+        //se puede poner una variable aparte de velocidad que tenga como referencia la original
+        //que contaria como el max de velocidad?? idk, pero poner esta funcion con corrutina?
+
+    }
+    //o hacer directamente una funcion de corrutina que sea que le baja la velocidad por unos segundos
+    //con otra variable de velocidad para que desp vuelva a la original?
 }

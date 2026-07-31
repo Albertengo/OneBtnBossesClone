@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ISkill_Enemigo
+public abstract class Skill_Enemigo
 {
-    void skill();
+    public virtual void execute_skill()
+    {
+        Debug.Log("me voy a morir");
+    }
 }

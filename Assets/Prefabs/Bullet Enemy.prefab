@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3016591774163397901}
   - component: {fileID: 5286069764719417718}
   - component: {fileID: 4989533319663248539}
+  - component: {fileID: -937208639058047270}
   m_Layer: 7
   m_Name: Bullet Enemy
   m_TagString: Bullet
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841fc9fd5612b7441a34fcd9dfd30d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPool: {fileID: 0}
   velocidad: 10
   rbBala: {fileID: 5286069764719417718}
   tiempo: 3
@@ -175,3 +177,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-937208639058047270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939783516275150860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e68e066c2ae7c43b247940ee10857b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 0}

@@ -13,10 +13,15 @@ public class Balas : MonoBehaviour
     #endregion
 
     #region funciones basicas
-    void Start()
+    private void OnEnable()
     {
+        //gameObject.SetActive(true);
+        //rbBala.velocity = transform.right * velocidad;
+        rbBala.velocity = Vector2.zero;
+        rbBala.angularVelocity = 0;
+
         rbBala.velocity = transform.right * velocidad;
-        Destroy(gameObject, tiempo);
+        StartCoroutine(DisableAfterTime());
     }
 
     #endregion
@@ -27,8 +32,34 @@ public class Balas : MonoBehaviour
 
         if (collision.gameObject.tag == Tag_Objetivo)
         {
-            Destroy(gameObject);
+            //GameObject gameObject = ObjectPool.SharedInstance.GetPooledObject();
+            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
+    }
+    IEnumerator DisableAfterTime()
+    {
+        yield return new WaitForSeconds(tiempo);
+
+        gameObject.SetActive(false);
+    }
+
+    //IEnumerator cooldown()
+    //{
+    //    //Debug.Log("cambio de velocidad");
+    //    //GameObject gameObject = ObjectPool.SharedInstance.GetPooledObject();
+    //    yield return new WaitForSeconds(tiempo);
+
+    //    gameObject.SetActive(false);
+
+
+    //    //yield return new WaitForSeconds(3f);
+    //    yield break;
+    //}
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
     #endregion
 }

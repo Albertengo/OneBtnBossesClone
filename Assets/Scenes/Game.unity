@@ -817,6 +817,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367699473}
   m_CullTransparentMesh: 1
+--- !u!1 &383892586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383892588}
+  m_Layer: 0
+  m_Name: ObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &383892588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383892586}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 967.8311, y: 510.57068, z: -3.8654487}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434190580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,7 +2659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4434b8b37539dd4b9242669a7aa90ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown_skill: 3
 --- !u!1 &1257723790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +2668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1257723791}
+  - component: {fileID: 1257723792}
   m_Layer: 0
   m_Name: Bala_Player_Parent
   m_TagString: Untagged
@@ -2660,6 +2691,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257723792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257723790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc4bc8f375868943b0ddbdae012ea06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolsize: 5
+  pooledObjects: []
+  objectToPool: {fileID: 2939783516275150860, guid: d01a0c50f4d104f468c62e6651ce17cc, type: 3}
 --- !u!1 &1443605568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,7 +3329,7 @@ Transform:
   m_GameObject: {fileID: 1936235793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.64, y: -0.019, z: -0.0051555554}
+  m_LocalPosition: {x: -3.354, y: -0.019, z: -0.0051555554}
   m_LocalScale: {x: 1.7368951, y: 1.7368951, z: 1.7368951}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3382,6 +3428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046488418}
+  - component: {fileID: 2046488419}
   m_Layer: 0
   m_Name: Bala_Enemy_Parent
   m_TagString: Untagged
@@ -3404,6 +3451,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2046488419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046488417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc4bc8f375868943b0ddbdae012ea06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolsize: 30
+  pooledObjects: []
+  objectToPool: {fileID: 2939783516275150860, guid: 6f08609255f622847bf9003ef18a9879, type: 3}
 --- !u!1 &2084070717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,3 +3822,4 @@ SceneRoots:
   - {fileID: 939440755}
   - {fileID: 875785350}
   - {fileID: 2725762168885812158}
+  - {fileID: 383892588}

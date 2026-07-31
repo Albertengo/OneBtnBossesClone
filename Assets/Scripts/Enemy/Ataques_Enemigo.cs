@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Ataques_Enemigo : MonoBehaviour
+public abstract class Ataques_Enemigo : MonoBehaviour
 {
     //script q va a heredar cada ataque del enemigo
-    //private Action[] skills;
-    [SerializeField] private ISkill_Enemigo[] skills;
+
+    //[SerializeField] public ISkill_Enemigo[] skills;
     [SerializeField] protected float cooldown_skill;
     bool can_skill;
 
@@ -22,32 +22,32 @@ public class Ataques_Enemigo : MonoBehaviour
     protected void Update()
     {
         if (can_skill)
-            StartCoroutine(Execute_Skill());
+            StartCoroutine(Cooldown_Skill());
     }
-    IEnumerator Execute_Skill()
+    public IEnumerator Cooldown_Skill()
     {
         can_skill = false;
 
         yield return new WaitForSeconds(cooldown_skill);
-        Instance_Skill();
+
+        //Instance_Skill();
+        Execute_skill();
         Debug.Log("Skill ejecutada");
+
         can_skill = true;
+
         yield break;
     }
 
-    //public void ExecuteSkill()
-    //{
-    //    if (can_skill) 
-    //    {
-    //        //Instance_Skill_Circle();
-    //        Skill();
-    //    }
-    //}
-    
+    public abstract void Execute_skill();
+
+    /*
     protected void Instance_Skill()
     {
-        RandomizeSkill();
+        Execute_skill();
+        //RandomizeSkill();
         Debug.Log("Skill instanciada");
+
         //en este void poner algo de codigo q sirva para que la skill se invoque dentro del círculo
         //donde va a estar el player???????
     }
@@ -57,6 +57,14 @@ public class Ataques_Enemigo : MonoBehaviour
         skills[RandomValue].skill();
         Debug.Log("Skill randomizada/elegida");
     }
+    */
 
-
+    //public void ExecuteSkill()
+    //{
+    //    if (can_skill) 
+    //    {
+    //        //Instance_Skill_Circle();
+    //        Skill();
+    //    }
+    //}
 }
