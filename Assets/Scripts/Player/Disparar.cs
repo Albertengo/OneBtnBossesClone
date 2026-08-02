@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Disparar : MonoBehaviour
+public class Disparar : ISkill
 {
-    public Transform Bullets;
+    [SerializeField] private ObjectPool pool;
+    //public Transform Bullets;
     public Transform FirePoint;
     public GameObject BulletPrefab;
     bool canShoot = true;
+    //private ObjectPool bulletPool;
 
-    void FixedUpdate()
+    public Disparar(ObjectPool bulletPool)
     {
-        if (canShoot)
-        {
-            StartCoroutine(Shoot(0.1f));
-        }
+        this.pool = bulletPool;
     }
 
-    private IEnumerator Shoot(float seconds)
+    //void FixedUpdate()
+    //{
+    //    //nuevo
+    //    execute_skill(FirePoint);
+    //}
+
+    /*
+    private IEnumerator Shoot(float seconds, Transform Firepoint)
     {
-        GameObject BulletPrefab = ObjectPool.SharedInstance.GetPooledObject();
+        //GameObject BulletPrefab = ObjectPool.SharedInstance.GetPooledObject();
+        GameObject BulletPrefab = pool.GetPooledObject();
         if (BulletPrefab != null)
         {
             BulletPrefab.transform.position = FirePoint.transform.position;
@@ -33,5 +40,29 @@ public class Disparar : MonoBehaviour
         canShoot = true;
 
     }
+    */
 
+    public void execute_skill(Transform Firepoint)
+    {
+        GameObject bullet = pool.GetPooledObject();
+
+        //if (bullet == null)
+        //    return;
+
+        if (bullet != null)
+        {
+            bullet.transform.position = Firepoint.position;
+            bullet.transform.rotation = Firepoint.rotation;
+            bullet.SetActive(true);
+        }
+        return;
+    }
+
+    //public void execute_skill(Transform Firepoint)//nuevo
+    //{
+    //    if (canShoot) //NO NUEVO
+    //    {
+    //        StartCoroutine(Shoot(0.1f));
+    //    }
+    //}
 }

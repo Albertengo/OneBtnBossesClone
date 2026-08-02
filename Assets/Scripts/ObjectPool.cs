@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool SharedInstance;
+    //public static ObjectPool SharedInstance;
     //int randomIndex;
     public int poolsize;
     public List<GameObject> pooledObjects;
@@ -21,7 +21,7 @@ public class ObjectPool : MonoBehaviour
     //}
     void Awake()
     {
-        SharedInstance = this;
+        //SharedInstance = this;
     }
 
     void Start()
@@ -51,6 +51,9 @@ public class ObjectPool : MonoBehaviour
                 return pooledObjects[i];
             }
         }
+        //AddToPool(1);
+        //pooledObjects[pooledObjects.Count - 1].SetActive(true);
+        //return pooledObjects[pooledObjects.Count - 1];
         return null;
     }
 }

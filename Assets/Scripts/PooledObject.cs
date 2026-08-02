@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PooledObject : MonoBehaviour
 {
-    public ObjectPool pool;
+    //public ObjectPool pool;
 
-    public void ReturnToPool()
-    {
-        pool.GetPooledObject();
-    }
+    //public void ReturnToPool()
+    //{
+    //    pool.GetPooledObject();
+    //}
 }
