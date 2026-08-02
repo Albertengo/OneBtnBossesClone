@@ -17,10 +17,7 @@ public class Balas : MonoBehaviour
     {
         //gameObject.SetActive(true);
         //rbBala.velocity = transform.right * velocidad;
-        rbBala.velocity = Vector2.zero;
-        rbBala.angularVelocity = 0;
-
-        rbBala.velocity = transform.right * velocidad;
+        SetSpeed();
         StartCoroutine(DisableAfterTime());
     }
 
@@ -38,6 +35,14 @@ public class Balas : MonoBehaviour
             //Destroy(gameObject);
         }
     }
+    void SetSpeed()
+    {
+        rbBala.velocity = Vector2.zero;
+        rbBala.angularVelocity = 0;
+
+        rbBala.velocity = transform.right * velocidad;
+    }
+
     IEnumerator DisableAfterTime()
     {
         yield return new WaitForSeconds(tiempo);

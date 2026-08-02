@@ -35,7 +35,7 @@ public abstract class Vida : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) //para cuando es atacado por el jugador o el enemigo
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet") || collision.CompareTag("Cone"))
         {
             recibirDaño(DañoRecibido);
         }
