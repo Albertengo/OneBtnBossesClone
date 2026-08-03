@@ -6,7 +6,7 @@ using UnityEngine;
 public class Barra : MonoBehaviour
 {
     [SerializeField] float speed = 50;
-    float rotation = 0;
+    //float rotation = 0;
     [SerializeField] private float tiempo = 2f;
     // Start is called before the first frame update
     private void OnEnable()
