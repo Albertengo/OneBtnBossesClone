@@ -1,40 +1,44 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Balas : MonoBehaviour// Desactivar_Skill
-{
-    //NOTA: sacar onenable y disable after time, hacerlo en un script solo (el del cono)
+//NOTA: script para el objeto de "Balas", tiene su comportamiento cuando se activa. Maneja la velocidad del disparo y su autodestrucción.
 
-    //este script sirve para manejar la velocidad del disparo y su autodestrucción
+public class Balas : MonoBehaviour
+{
     #region variables
+
+    [Header("BEHAVIOUR")]
+
     public float velocidad = 1f;
     public Rigidbody2D rbBala;
-    public float tiempo = 3; //el alcance que va a tener la bala antes de desaparecer
+    public float tiempo = 3;
     [SerializeField] string Tag_Objetivo;
+
     #endregion
 
-    #region funciones basicas
     private void OnEnable()
     {
-        //gameObject.SetActive(true);
-        //rbBala.velocity = transform.right * velocidad;
         SetSpeed();
         StartCoroutine(DisableAfterTime());
     }
+    IEnumerator DisableAfterTime()
+    {
+        yield return new WaitForSeconds(tiempo);
 
-    #endregion
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
 
     #region code
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == Tag_Objetivo)
         {
-            //GameObject gameObject = ObjectPool.SharedInstance.GetPooledObject();
             gameObject.SetActive(false);
-            //gameObject.SetActive(false);
-            //Destroy(gameObject);
         }
     }
     void SetSpeed()
@@ -44,29 +48,6 @@ public class Balas : MonoBehaviour// Desactivar_Skill
 
         rbBala.velocity = transform.right * velocidad;
     }
-
-    IEnumerator DisableAfterTime()
-    {
-        yield return new WaitForSeconds(tiempo);
-
-        gameObject.SetActive(false);
-    }
-
-    //IEnumerator cooldown()
-    //{
-    //    //Debug.Log("cambio de velocidad");
-    //    //GameObject gameObject = ObjectPool.SharedInstance.GetPooledObject();
-    //    yield return new WaitForSeconds(tiempo);
-
-    //    gameObject.SetActive(false);
-
-
-    //    //yield return new WaitForSeconds(3f);
-    //    yield break;
-    //}
-    private void OnDisable()
-    {
-        StopAllCoroutines();
-    }
+    
     #endregion
 }

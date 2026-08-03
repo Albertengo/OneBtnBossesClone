@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.LowLevel;
+
+//NOTA: este script ejecuta la skill del jugador (disparar), haciendo que se disparen balas de a poco indefinidamente.
 
 public class Player_ATQ : MonoBehaviour
 {
@@ -15,10 +15,9 @@ public class Player_ATQ : MonoBehaviour
         disparar = new Disparar(BulletsPool);
         canShoot = true;
     }
+
     void FixedUpdate()
     {
-        //nuevo
-        //disparar.execute_skill(Firepoint);
         if (canShoot) 
             StartCoroutine(Shoot(0.1f));
     }
@@ -31,7 +30,6 @@ public class Player_ATQ : MonoBehaviour
     }
     void ATK()
     {
-        //disparar = new Disparar(BulletsPool);
         disparar.execute_skill(Firepoint);
     }
 }

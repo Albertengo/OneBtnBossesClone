@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NOTA: script para el objeto de "Barra", tiene su comportamiento cuando se activa. Rota.
+
 public class Barra : MonoBehaviour
 {
+    [Header("BEHAVIOUR")]
     [SerializeField] float speed = 50;
-    //float rotation = 0;
     [SerializeField] private float tiempo = 2f;
-    // Start is called before the first frame update
+
     private void OnEnable()
     {
-        //Spin();
         StartCoroutine(Spin());
         StartCoroutine(DisableAfterTime());
     }
@@ -36,16 +37,4 @@ public class Barra : MonoBehaviour
             yield return null;
         }
     }
-    //void Spin()
-    //{
-    //    //SetSpeed();
-    //    //gameObject.transform.rotation = Quaternion.Euler(0, 0, rotation);
-    //    //gameObject.transform.Translate(0, 0 * Time.deltaTime, 0);
-    //    transform.Rotate(0, 0, speed * Time.deltaTime);
-    //    //transform.Rotate(Vector2.up * speed * Time.deltaTime);
-    //}
-    //protected void SetSpeed()
-    //{
-    //    rotation = rotation + speed * Time.deltaTime;
-    //}
 }

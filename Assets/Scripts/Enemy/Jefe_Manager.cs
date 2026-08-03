@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using static Tipos_ATQ;
+
+//NOTA: este script toma los tipos de skills del jefe y crea un ataque randomizado cada cierto tiempo. 
 
 public class Jefe_Manager : MonoBehaviour
 {
@@ -16,11 +17,10 @@ public class Jefe_Manager : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (canChangeATK) //NO NUEVO
+        if (canChangeATK)
         {
             StartCoroutine(Execute_ATK(3f));
         }
-        //SkillRandomizer();
     }
     void SkillRandomizer()
     {
@@ -37,12 +37,4 @@ public class Jefe_Manager : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         canChangeATK = true;
     }
-    //void Attack()
-    //{
-    //    ISkill attack =
-    //        factory.CreateAttack(AttackType.Cone);
-
-    //    attack.execute_skill(firePoint);
-    //    //attack.Execute(firePoint);
-    //}
 }

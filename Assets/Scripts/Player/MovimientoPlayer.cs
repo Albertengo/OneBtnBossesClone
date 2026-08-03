@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NOTA: este script cambia la dirección del jugador y baja su velocidad cuando lo hace.
+
 public class MovimientoPlayer : movimientocircular
 {
     void Update()

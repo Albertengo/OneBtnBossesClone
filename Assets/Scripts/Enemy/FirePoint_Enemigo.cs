@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NOTA: este script cambia la dirección en que el enemigo apunta de manera random.
+
 public class FirePoint_Enemigo : movimientocircular
 {
     [SerializeField] float tiempo_randomizer;

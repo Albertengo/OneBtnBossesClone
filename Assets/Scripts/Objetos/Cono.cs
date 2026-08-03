@@ -1,28 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//NOTA: script para el objeto de "Cono", tiene su comportamiento cuando se activa.
 public class Cono : MonoBehaviour
 {
-    //NOTA: cambiar nombre de este script a "Desactivar_Skill" o algo asi, ponerlo en todas las skills
-
+    [Header("BEHAVIOUR")]
     [SerializeField] private float tiempo = 2f;
-    //[SerializeField] private int daño = 10;
 
     private void OnEnable()
     {
         StartCoroutine(DisableAfterTime());
     }
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.CompareTag("Player"))
-    //    {
-    //        Vida vida = collision.GetComponent<Vida>();
-
-    //        if (vida != null)
-    //            vida.recibirDaño(daño);
-    //    }
-    //}
 
     IEnumerator DisableAfterTime()
     {

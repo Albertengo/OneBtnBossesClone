@@ -6,7 +6,6 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Barra_Ataque : ISkill
 {
     private ObjectPool pool;
-    
 
     public Barra_Ataque(ObjectPool pool)
     {
@@ -20,17 +19,8 @@ public class Barra_Ataque : ISkill
         {
             barra.transform.position = Firepoint.position;
             barra.transform.rotation = Firepoint.rotation;
-            //barra.transform.Rotate(Vector3.up * speed * Time.deltaTime);
 
             barra.SetActive(true);
         }
-        //Spin();
     }
-
-    //void Spin()
-    //{
-        
-    //    barra.transform.Rotate(Vector3.up * speed * Time.deltaTime);
-    //}
-    
 }

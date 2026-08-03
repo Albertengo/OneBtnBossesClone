@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NOTA: este script hace que el jugador se mueva en un circulo teniendo en cuenta la dirección que tenga el jugador.
+
 public abstract class movimientocircular : MonoBehaviour
 {
     protected float rotation = 0;
@@ -12,9 +14,6 @@ public abstract class movimientocircular : MonoBehaviour
     protected void SetSpeed()
     {
         rotation = rotation + speed * Time.deltaTime * (direccionHorario ? 1 : -1);
-
-        //if (direccionHorario)
-        //    SpeedChange();//Slow_Speed();
     }
     protected void obj_rotation()
     {
@@ -23,23 +22,4 @@ public abstract class movimientocircular : MonoBehaviour
         gameObject.transform.Translate(0, 0 * Time.deltaTime, 0);
     }
 
-  
-    //protected void SpeedChange()
-    //{
-    //    speed = 150;
-    //    Debug.Log("cambio de velocidad");
-    //    for (int i = 0; i < 5; i++)
-    //    {
-    //        speed += i; // Aumenta la variable "total" sumándole "i"
-    //    }
-    //    //if (speed < 200)
-    //    //{
-    //    //    speed++;
-    //    //}
-    //    //se puede poner una variable aparte de velocidad que tenga como referencia la original
-    //    //que contaria como el max de velocidad?? idk, pero poner esta funcion con corrutina?
-
-    //}
-    //o hacer directamente una funcion de corrutina que sea que le baja la velocidad por unos segundos
-    //con otra variable de velocidad para que desp vuelva a la original?
 }

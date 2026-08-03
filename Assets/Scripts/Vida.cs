@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NOTA: este script es padre para todos los objetos con vida, definiendo cómo reciben daño (player y enemigo)
+
 public abstract class Vida : MonoBehaviour
 {
     [SerializeField] private float SaludMax;
@@ -27,9 +29,6 @@ public abstract class Vida : MonoBehaviour
         {
             Death();
             HealthBar.gameObject.SetActive(false);
-            //Destroy(gameObject);
-            //Debug.Log("Enemigo eliminado");
-            //nivel terminado
         }
     }
 
