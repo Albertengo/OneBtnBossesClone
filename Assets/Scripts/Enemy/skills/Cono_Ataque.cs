@@ -45,6 +45,7 @@ public class Cono_Ataque : ISkill//Skill_Enemigo//Ataques_Enemigo, ISkill_Enemig
         //}
     }
 
+
     //public GameObject prefab;
 
     //public override void execute_skill()

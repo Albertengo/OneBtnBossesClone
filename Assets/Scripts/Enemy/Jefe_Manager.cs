@@ -32,6 +32,7 @@ public class Jefe_Manager : MonoBehaviour
     private IEnumerator Execute_ATK(float seconds)
     {
         SkillRandomizer();
+
         canChangeATK = false;
         yield return new WaitForSeconds(seconds);
         canChangeATK = true;

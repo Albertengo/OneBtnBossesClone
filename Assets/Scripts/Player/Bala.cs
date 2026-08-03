@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Balas : MonoBehaviour
+public class Balas : MonoBehaviour// Desactivar_Skill
 {
+    //NOTA: sacar onenable y disable after time, hacerlo en un script solo (el del cono)
+
     //este script sirve para manejar la velocidad del disparo y su autodestrucción
     #region variables
     public float velocidad = 1f;

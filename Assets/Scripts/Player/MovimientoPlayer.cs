@@ -25,11 +25,11 @@ public class MovimientoPlayer : movimientocircular
     }
     IEnumerator Slow_Speed()
     {
-        speed = 130;
+        speed = 100;
 
         while (speed < 200)
         {
-            speed = speed + 4;
+            speed = speed + 5;
             yield return new WaitForSeconds(0.1f);
         }
     }

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Cono : MonoBehaviour
 {
+    //NOTA: cambiar nombre de este script a "Desactivar_Skill" o algo asi, ponerlo en todas las skills
+
     [SerializeField] private float tiempo = 2f;
-    [SerializeField] private int daño = 10;
+    //[SerializeField] private int daño = 10;
 
     private void OnEnable()
     {

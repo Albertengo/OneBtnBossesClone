@@ -16,6 +16,6 @@ public enum AttackType
 {
     Shoot,
     Cone,
-    Spiral,
-    Laser
+    Bar,
+    //Laser
 }

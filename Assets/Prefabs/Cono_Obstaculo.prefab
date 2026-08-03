@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5039454352967367093}
   m_Layer: 7
   m_Name: Cono_Obstaculo
-  m_TagString: Bullet
+  m_TagString: Cone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: 2
-  "da\xF1o": 10
 --- !u!60 &-5428439659159190561
 PolygonCollider2D:
   m_ObjectHideFlags: 0

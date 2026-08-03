@@ -7,6 +7,7 @@ public class Factory_Enemigo : MonoBehaviour
 {
     public ObjectPool bulletPool;
     public ObjectPool ConePool;
+    public ObjectPool BarPool;
 
     public ISkill CreateAttack(AttackType type)
     {
@@ -18,8 +19,8 @@ public class Factory_Enemigo : MonoBehaviour
             case AttackType.Cone:
                 return new Cono_Ataque(ConePool);
 
-            //case AttackType.Laser:
-            //    return new LaserAttack(laserPool);
+            case AttackType.Bar:
+                return new Barra_Ataque(BarPool);
 
             default:
                 return null;
