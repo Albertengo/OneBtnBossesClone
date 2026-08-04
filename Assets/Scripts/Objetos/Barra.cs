@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NOTA: script para el objeto de "Barra", tiene su comportamiento cuando se activa. Rota.
-
 public class Barra : MonoBehaviour
 {
     [Header("BEHAVIOUR")]

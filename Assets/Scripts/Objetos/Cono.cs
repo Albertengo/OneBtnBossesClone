@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-//NOTA: script para el objeto de "Cono", tiene su comportamiento cuando se activa.
 public class Cono : MonoBehaviour
 {
     [Header("BEHAVIOUR")]

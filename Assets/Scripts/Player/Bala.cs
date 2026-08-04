@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-//NOTA: script para el objeto de "Balas", tiene su comportamiento cuando se activa. Maneja la velocidad del disparo y su autodestrucción.
-
 public class Balas : MonoBehaviour
 {
     #region variables

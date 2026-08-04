@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NOTA: este script toma los tipos de skills del jefe y crea un ataque randomizado cada cierto tiempo. 
-
 public class Jefe_Manager : MonoBehaviour
 {
     public Factory_Enemigo factory;

@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-//NOTA: este script ejecuta la skill del jugador (disparar), haciendo que se disparen balas de a poco indefinidamente.
 
 public class Player_ATQ : MonoBehaviour
 {

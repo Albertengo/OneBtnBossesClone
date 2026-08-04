@@ -1195,7 +1195,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8584906, g: 0.5223834, b: 0.585416, a: 1}
+  m_BackGroundColor: {r: 0.7264151, g: 0.39894617, b: 0.38033998, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3445,7 +3445,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e9d2bddec23daa49a8152e7f30fff74, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6117647}
+  m_Color: {r: 0.990566, g: 0.77678305, b: 0.630785, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3670,7 +3670,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 466781222, guid: a8133ca7e69314c4cafcfe1cd884818d, type: 3}
-  m_Color: {r: 1, g: 0.9181096, b: 0.8632076, a: 1}
+  m_Color: {r: 1, g: 0.8839623, b: 0.8066038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3847,7 +3847,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.072805695, g: 0.034843344, b: 0.8207547, a: 0.7764706}
+      key0: {r: 1, g: 0.6743851, b: 0.514151, a: 0.7764706}
       key1: {r: 0.8743709, g: 0.6541474, b: 0.9433962, a: 0.8980392}
       key2: {r: 0.99681884, g: 0.9912424, b: 0.9985667, a: 0.7797578}
       key3: {r: 0.99731576, g: 0.99261045, b: 0.99879056, a: 0}

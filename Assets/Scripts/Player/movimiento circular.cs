@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NOTA: este script hace que el jugador se mueva en un circulo teniendo en cuenta la dirección que tenga el jugador.
-
 public abstract class movimientocircular : MonoBehaviour
 {
     protected float rotation = 0;
