@@ -3235,7 +3235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c5006100ca2b446adfa35bd46f41b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaludMax: 750
+  SaludMax: 500
   SaludActual: 0
   "Da\xF1oRecibido": 2
   HealthBar: {fileID: 223772969}
