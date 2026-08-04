@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 4179239981981262557}
   - component: {fileID: 3016591774163397901}
   - component: {fileID: 5286069764719417718}
-  - component: {fileID: 4989533319663248539}
-  - component: {fileID: -937208639058047270}
+  - component: {fileID: 2985526084105903956}
   m_Layer: 7
   m_Name: Bullet Enemy
   m_TagString: Bullet
@@ -30,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 2939783516275150860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.21, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.3503202, y: 0.2982681, z: 0.69770324}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.08531183, y: 0.08531183, z: 0.08531183}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: df69aa207ad0e6c4daa6f2c3d414915e, type: 3}
-  m_Color: {r: 0.8862745, g: 0.3529412, b: 0.34901962, a: 1}
+  m_Sprite: {fileID: 21300000, guid: efa8c036a676bf04f95f194e31d65e86, type: 3}
+  m_Color: {r: 1, g: 0.84547585, b: 0.8443396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131,8 +130,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4989533319663248539
-BoxCollider2D:
+--- !u!58 &2985526084105903956
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,7 +142,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -164,27 +163,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &-937208639058047270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939783516275150860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e68e066c2ae7c43b247940ee10857b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 8.25

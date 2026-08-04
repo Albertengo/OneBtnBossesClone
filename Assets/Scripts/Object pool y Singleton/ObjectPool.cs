@@ -5,24 +5,9 @@ using UnityEngine.Pool;
 
 public class ObjectPool : MonoBehaviour
 {
-    //public static ObjectPool SharedInstance;
-    //int randomIndex;
     public int poolsize;
     public List<GameObject> pooledObjects;
     public GameObject objectToPool;
-
-    //private void AddRandomObstaclesToPool()
-    //{
-    //    for (int i = 0; i < amountToPool; i++)
-    //    {
-    //        randomIndex = Random.Range(0, ObstaclePrefabList.Length);
-    //        //randomObstacle = obstaclePrefabList[randomIndex];
-    //    }
-    //}
-    void Awake()
-    {
-        //SharedInstance = this;
-    }
 
     void Start()
     {
@@ -45,15 +30,11 @@ public class ObjectPool : MonoBehaviour
     {
         for (int i = 0; i < poolsize; i++)
         {
-            if (!pooledObjects[i].activeInHierarchy)//activeSelf)
+            if (!pooledObjects[i].activeInHierarchy)
             {
-                //pooledObjects[i].SetActive(true);
                 return pooledObjects[i];
             }
         }
-        //AddToPool(1);
-        //pooledObjects[pooledObjects.Count - 1].SetActive(true);
-        //return pooledObjects[pooledObjects.Count - 1];
         return null;
     }
 }

@@ -7,7 +7,6 @@ public class HealthSlider : MonoBehaviour
 {
     public Slider slider;
 
-    // Start is called before the first frame update
     void Start()
     {
         slider = GetComponent<Slider>();
